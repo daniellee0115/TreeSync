@@ -1,1 +1,1 @@
-# TreeSync
+# TreeSync - Sync Your Calendar With Your Emails Using LLMs!

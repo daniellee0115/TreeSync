@@ -31,4 +31,6 @@ def llmCall(message):
     }
 
     response = requests.post(url, json=payload, headers=headers)
-    return json.loads(response.text)["choices"][0]["message"]["content"]
+    if "choices" in json.loads(response.text):
+        return json.loads(response.text)["choices"][0]["message"]["content"]
+    return None
