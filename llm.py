@@ -27,7 +27,7 @@ def llmCall(message):
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "Authorization": "Bearer c9ca6147ebd2c3ceed4f1beed6557528faea8929646ef505f277cdb642aed802"
+        "Authorization": "Bearer <key>"
     }
 
     response = requests.post(url, json=payload, headers=headers)
