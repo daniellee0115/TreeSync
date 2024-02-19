@@ -1,3 +1,5 @@
+import time
+
 def llmCall(message):
     # message is an array with 0th value being system instructions and 1st value being user input.
     import requests
@@ -29,7 +31,7 @@ def llmCall(message):
         "content-type": "application/json",
         "Authorization": "Bearer <key>"
     }
-
+    time.sleep(0.5)
     response = requests.post(url, json=payload, headers=headers)
     if "choices" in json.loads(response.text):
         return json.loads(response.text)["choices"][0]["message"]["content"]
